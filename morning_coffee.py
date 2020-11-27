@@ -5,6 +5,8 @@ import bs4
 from bs4 import BeautifulSoup
 import time
 
+print("Καλημέρα Μανούσο")
+
 # Ειδήσεις
 r = requests.get("https://www.kathimerini.gr/epikairothta/")
 soup = BeautifulSoup(r.text, "html.parser")

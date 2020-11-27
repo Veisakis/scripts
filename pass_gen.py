@@ -2,14 +2,14 @@ import string
 import random
 
 repository = list(string.ascii_letters)
-length = int(input("How many digits: "))
-pswd = []
+password_size = int(input("How many digits: "))
+password_list = []
 
-for i in range(length):
-    c = random.randint(0,len(repo)-1)
-    d = repository[c]
-    pswd.append(d)
+for i in range(password_size):
+    choose_random = random.randint(0, len(repository)-1)
+    random_character = repository[choose_random]
+    password_list.append(random_character)
 
-password = "".join(pswd)
+password = "".join(password_list)
 print(password)
             

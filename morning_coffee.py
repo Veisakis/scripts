@@ -5,7 +5,7 @@ import bs4
 from bs4 import BeautifulSoup
 import time
 
-print("Καλημέρα Μανούσο")
+print("Hello")
 
 # Ειδήσεις
 r = requests.get("https://www.kathimerini.gr/epikairothta/")

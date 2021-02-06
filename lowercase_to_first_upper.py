@@ -19,5 +19,5 @@ def to_jaden_case(string):
     return jaden_case
 
 
-phrase = "hello world"
+phrase = input('Give a phrase: ')
 to_jaden_case(phrase)

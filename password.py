@@ -1,7 +1,14 @@
 import string
 import secrets
 
-alphabet = string.ascii_letters + string.digits
-password = ''.join(secrets.choice(alphabet) for i in range(8))
+sectors = int(input('Sectors: '))
+length = int(input('Length of sector: '))
 
-print(password)
+passwords = []
+alphabet = string.ascii_letters + string.digits
+
+for _ in range(sectors):
+    password = ''.join([secrets.choice(alphabet) for _  in range(length)])
+    passwords.append(password)
+
+print('-'.join(passwords))

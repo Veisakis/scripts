@@ -1,7 +1,6 @@
 # Setting PATH for Python 3.8
 # The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
-export PATH
+export PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
 
 if [ -f ~/.bashrc ]; then
 	source ~/.bashrc
@@ -16,5 +15,3 @@ alias ll='ls -al'
 alias pt='python3'
 alias ipt='ipython'
 alias clean='rm -rf /Users/Manousos/Downloads/* && rm -rf /Users/Manousos/.Trash/*'
-
-

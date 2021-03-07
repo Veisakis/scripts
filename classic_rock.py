@@ -58,7 +58,7 @@ print(f'There are {len(new_vids)} new Rock Albums available!')
 if new_vids:
     proceed = input('Do you want to proceed downloading them? (y/n) ')
 
-    if proceed == y:
+    if proceed == 'y' :
         with concurrent.futures.ThreadPoolExecutor() as executor:
             executor.map(download_video, new_vids)
 

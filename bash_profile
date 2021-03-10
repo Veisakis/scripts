@@ -18,3 +18,4 @@ alias ipt='ipython'
 alias clean='rm -rf /Users/Manousos/Downloads/* && rm -rf /Users/Manousos/.Trash/*'
 alias ssdumnt="diskutil unmount /dev/disk2s2 ; diskutil unmount /dev/disk2s3 ; diskutil unmount /dev/disk2s4"
 alias yt='youtube-dl -x --audio-format mp3'
+alias up='brew update && brew upgrade && brew cleanup'

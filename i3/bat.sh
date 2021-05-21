@@ -1,18 +1,23 @@
 #!/bin/bash
 
-status=$(cat /sys/class/power_supply/BAT0/capacity)
+cap=$(cat /sys/class/power_supply/BAT0/capacity)
 
 if [ $(cat /sys/class/power_supply/AC/online) -eq 0 ]
 then
-	if [ $status -lt 20 ]
+	if [ $cap -lt 20 ]
 	then
-		echo 🔋$status%
+		echo 🔋$cap%
 		echo "" 
 		echo "#FF001D"
 		echo ""
 	else
-		echo 🔋$status%
+		echo 🔋$cap%
 	fi
 else
-	echo ⚡$status%
+	if [ $cap -eq 100 ]
+	then
+		echo ⚡$cap%
+	else	
+		echo ⚡$cap%
+	fi
 fi

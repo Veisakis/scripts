@@ -13,8 +13,9 @@ sudo apt install vim git sxiv zathura mpv python3 python3-pip brave-browser nmap
 
 pip install matplotlib pandas virtualenv
 
-cd && rm -rf Movies Music Videos Pictures Documents 2>/dev/null && mkdir -p .ssh scripts Wallpapers Documents/templates lists
+cd && rm -rf Movies Music Videos Pictures Documents 2>/dev/null && mkdir -p .ssh scripts Wallpapers Documents/templates Documents/lists
 
+#Git
 cd ~/Desktop/scripts && cp bandwidth.sh ~/scripts/ && cp -r i3 ~/scripts/ && cp linux_setup.sh ~/scripts/
 
 cd ~/Desktop && git clone https://github.com/Veisakis/config
@@ -24,5 +25,6 @@ cp .gitconfig ~ && cp .bashrc ~ && cp .vimrc ~ && cp i3/config ~/.config/i3/ && 
 cd ~/Desktop && git clone https://github.com/Veisakis/latex
 cp ~/Desktop/latex/templates ~/Documents/
 cd ~/Desktop && rm -rf *
+#Git
 
 sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove

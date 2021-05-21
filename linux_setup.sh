@@ -20,6 +20,9 @@ cd ~/Desktop/scripts && cp bandwidth.sh ~/scripts/ && cp -r i3 ~/scripts/ && cp 
 cd ~/Desktop && git clone https://github.com/Veisakis/config
 cd config/linux
 cp .gitconfig ~ && cp .bashrc ~ && cp .vimrc ~ && cp i3/config ~/.config/i3/ && cp i3/i3blocks.conf /etc/
-cd ~/Desktop && rm -rf config
+
+cd ~/Desktop && git clone https://github.com/Veisakis/latex
+cp ~/Desktop/latex/templates ~/Documents/
+cd ~/Desktop && rm -rf *
 
 sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove

@@ -13,7 +13,7 @@ sudo apt install vim git sxiv zathura mpv python3 python3-pip brave-browser nmap
 
 pip install matplotlib pandas virtualenv
 
-cd && mkdir -p .ssh scripts Documents/templates lists
+cd && rm -rf Movies Music Videos Pictures Documents 2>/dev/null && mkdir -p .ssh scripts Wallpapers Documents/templates lists
 
 cd ~/Desktop/scripts && cp bandwidth.sh ~/scripts/ && cp -r i3 ~/scripts/ && cp linux_setup.sh ~/scripts/
 

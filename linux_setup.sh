@@ -13,11 +13,11 @@ sudo apt install vim git sxiv zathura mpv python3 python3-pip brave-browser nmap
 
 pip install matplotlib pandas virtualenv
 
-cd && rm -rf Movies Music Videos Pictures Documents 2>/dev/null && mkdir -p .ssh scripts Wallpapers Documents
+#cd && rm -rf Movies Music Videos Pictures Documents 2>/dev/null && mkdir -p .ssh scripts Wallpapers Documents
 
 #Git
-cd ~/Desktop && git clone git@github.com:/Veisakis/config && git clone git@github.com:/Veisakis/scripts
-cp ~/Desktop/scripts/bandwidth.sh ~/scripts/ && cp -r ~/Desktop/scripts/i3 ~/scripts/
-cp ~/Desktop/config/linux/.bashrc ~ && cp ~/Desktop/config/linux/.vimrc ~ && cp ~/Desktop/config/linux/i3/config ~/.config/i3/ && cp ~/Desktop/config/linux/i3/i3blocks.conf /etc
-cd ~/Desktop && rm -rf *
+#cd ~/Desktop && git clone git@github.com:/Veisakis/config && git clone git@github.com:/Veisakis/scripts
+#cp ~/Desktop/scripts/bandwidth.sh ~/scripts/ && cp -r ~/Desktop/scripts/i3 ~/scripts/
+#cp ~/Desktop/config/linux/.bashrc ~ && cp ~/Desktop/config/linux/.vimrc ~ && cp ~/Desktop/config/linux/i3/config ~/.config/i3/ && cp ~/Desktop/config/linux/i3/i3blocks.conf /etc
+#cd ~/Desktop && rm -rf *
 #Git

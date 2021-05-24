@@ -8,8 +8,8 @@ then
 	then
 		echo 🔋$cap%
 		echo "" 
+		echo "" 
 		echo "#FF001D"
-		echo ""
 	else
 		echo 🔋$cap%
 	fi

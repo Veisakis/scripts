@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sleep 5
+sleep 10
 
 loss=$(ping -q -c1 wttr.in | awk 'NR==4 {print $6}' | grep -o [0-9]*)
 

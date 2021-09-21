@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sleep 5
+sleep 10
 
 case $BLOCK_BUTTON in
 	1) echo "🌍 $(curl https://ipinfo.io/ip)" ;;

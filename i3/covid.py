@@ -1,7 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 import requests
+import time
 import pandas as pd
 from datetime import date, timedelta
+
+time.sleep(10)
 
 obj_1 = date.today() - timedelta(days=1)
 date_1 = obj_1.strftime('%Y-%m-%d')
@@ -15,4 +18,6 @@ headers = {'Authorization':'Token cae197251734baf5d81483596ac52d81cb41b779'}
 r = requests.get(url, headers=headers)
 
 df = pd.DataFrame(r.json())
-print(df['totaldistinctpersons'].sum())
+
+persons = df['totaldistinctpersons'].sum() / 2
+print(int(persons))

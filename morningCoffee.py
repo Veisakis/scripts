@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 import requests
+import time
 import bs4
 from bs4 import BeautifulSoup
-import time
 
 print("Hello")
 

@@ -5,7 +5,6 @@ def newTable(dim):
     table=[]
     for i in range(dim):
         table.append(['.', '.', '.', '.'])
-
     return table
 
 def a(N,sumx,sumy,sumxy,sumx2):
@@ -23,7 +22,6 @@ for o in range(len(table)):
     print(o+1)
     x = float(input('Give x: '))
     y = float(input('Give y: '))
-
     table[o][0] = x
     table[o][1] = y
 

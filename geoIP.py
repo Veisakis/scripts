@@ -1,9 +1,11 @@
 from mpl_toolkits.basemap import Basemap
-import os
-import re
-import requests
 import matplotlib.pyplot as plt
 import numpy as np
+import requests
+import os
+import re
+
+
 
 
 pattern = re.compile(r'\d+[.]\d+[.]\d+[.]\d+')

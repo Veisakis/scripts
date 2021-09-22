@@ -6,8 +6,6 @@ import os
 import re
 
 
-
-
 pattern = re.compile(r'\d+[.]\d+[.]\d+[.]\d+')
 
 key = os.environ['GEO_API']

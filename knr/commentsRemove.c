@@ -19,7 +19,7 @@ void removeComments(int lineLen, char line[]){
 	int state = OUT; /* Keeping track of being in or out of a comment */
 	int i;
 	
-	for (i=1; i <= lineLen; ++i){
+	for (i=0; i < lineLen; ++i){
 		if ((line[i] == '/') && (line[i+1] == '*'))
 			state = IN;
 
@@ -29,7 +29,7 @@ void removeComments(int lineLen, char line[]){
 		}
 
 		if (state == OUT)
-			putchar(line[i-1]);
+			putchar(line[i]);
 	}
 }
 

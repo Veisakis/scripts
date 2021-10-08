@@ -1,0 +1,40 @@
+---
+
+- hosts: website
+  become: true
+  pre_tasks:
+  
+  - name: Update Repository
+    apt:
+      update_cache: true
+      upgrade: full
+    changed_when: false
+
+- hosts: website
+  become: true
+  tasks:
+
+  - name: Install Apache and PHP support
+    package:
+      name: 
+        - "{{ apache_package }}"
+        - "{{ php_module }}"
+        - "{{ cron }}"
+      state: latest
+  
+  - name: DuckDns setup
+    copy:
+      src: duckdns
+      dest: "{{ home }}"
+      owner: "{{ user }}"
+      group: "{{ group }}"
+      mode: 755
+  
+  - name: Cronjob
+    cron:
+      name: DuckDns
+      user: "{{ user }}"
+      minute: "*/5"
+      job: "{{ home }}/duckdns/duck.sh > /dev/null 2>&1"
+
+...

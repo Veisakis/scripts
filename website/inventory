@@ -1,2 +1,0 @@
-[website]
-pi@istoria.duckdns.org apache_package="apache2" php_module=libapache2-mod-php git=git user=pi group=pi home=/home/pi

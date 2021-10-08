@@ -1,14 +1,3 @@
-#include <stdio.h>
-
-#define MAXLINE 20
-
-void getLine();
-
-int main(){
-	printf("Does it work?\n");
-	getLine();
-}
-
 void getLine(){
 	int c;
 	int i = 0;

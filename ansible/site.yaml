@@ -14,12 +14,13 @@
   become: true
   tasks:
 
-  - name: Install Apache and PHP support
+  - name: Install Apache, PHP support, Cron and Git
     package:
       name: 
         - "{{ apache_package }}"
         - "{{ php_module }}"
         - "{{ cron }}"
+        - "{{ git }}"
       state: latest
   
   - name: DuckDns setup
@@ -37,4 +38,8 @@
       minute: "*/5"
       job: "{{ home }}/duckdns/duck.sh > /dev/null 2>&1"
 
+  - name: Git
+    git:
+      repo: "https://github.com/Veisakis/openhistory"
+      dest: "/var/www/html/"
 ...

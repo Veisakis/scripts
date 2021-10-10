@@ -5,5 +5,6 @@
 
 int getLine(char line[]);
 void reverse(char s[]);
+void strip(int linelen, char line[]);
 
 #endif

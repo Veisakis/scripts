@@ -14,7 +14,7 @@
   become: true
   tasks:
 
-  - name: Install Apache, PHP support, Cron and Git
+  - name: Install Apache, PHP support, Cron, Vim and Git
     package:
       name: 
         - "{{ apache_package }}"
@@ -30,7 +30,7 @@
       dest: "{{ home }}"
       owner: "{{ user }}"
       group: "{{ group }}"
-      mode: 755
+      mode: 0755
   
   - name: Cronjob
     cron:
@@ -38,6 +38,11 @@
       user: "{{ user }}"
       minute: "*/5"
       job: "{{ home }}/duckdns/duck.sh > /dev/null 2>&1"
+
+  - name: Empty html directory
+    file:
+      path: /var/www/html/index.html
+      state: absent
 
   - name: Git
     git:

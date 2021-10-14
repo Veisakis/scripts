@@ -1,2 +1,2 @@
 [website]
-pi@192.168.1.13 apache_package="apache2" php_module=libapache2-mod-php git=git cron=cron user=pi group=pi home=/home/pi
+pi@192.168.1.13 apache_package="apache2" php_module=libapache2-mod-php cron=cron user=pi group=pi home=/home/pi

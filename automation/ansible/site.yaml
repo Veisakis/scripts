@@ -20,7 +20,8 @@
         - "{{ apache_package }}"
         - "{{ php_module }}"
         - "{{ cron }}"
-        - "{{ git }}"
+        - "git"
+        - "vim"
       state: latest
   
   - name: DuckDns setup

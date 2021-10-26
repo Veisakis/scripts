@@ -7,3 +7,17 @@ void reverse(char s[]){
 		c = s[i], s[i] = s[j], s[j] = c;
 }
 
+void reverser(char s[], int size){
+	static int start = 0;
+	int end = size;
+	int buf;
+	
+	if (start < end){
+		buf = s[start], s[start] = s[end], s[end] = buf;
+		start++, end--;
+		reverser(s, end);
+	}
+
+	if (start >= end)
+		s[strlen(s)] = '\0';
+}

@@ -3,9 +3,11 @@
 
 #define MAXLINE 1000
 
-int getLine(char line[]);
+void pstrcat(char *s, char *t);
 void reverse(char s[]);
-int getch(void);
 void ungetch(int c);
+
+int getLine(char line[]);
+int getch(void);
 
 #endif

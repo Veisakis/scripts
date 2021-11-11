@@ -4,7 +4,7 @@
 #define BUFSIZE 100
 #define NUMBER 1
 
-char buf[BUFSIZE];
+static char buf[BUFSIZE];
 
 int getop(char s[]){
 	int i, c;

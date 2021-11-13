@@ -1,10 +1,10 @@
 # -*- MakeFile -*-
 
-tail: tail.o isnumber.o getLine.o shiftarray.o
+install: tail.o isnumber.o getLine.o shiftarray.o
 	gcc tail.o isnumber.o getLine.o shiftarray.o -o tail
 
 tail.o: tail.c tail.h
-	gcc -c tail.c tail.h
+	gcc -c tail.c
 
 shiftarray.o: shiftarray.c
 	gcc -c shiftarray.c

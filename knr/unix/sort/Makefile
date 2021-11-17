@@ -1,7 +1,16 @@
 # -*- MakeFile -*-
 
-install: sort.o numcmp.o getLine.o qsort.o readlines.o alloc.o
-	gcc sort.o numcmp.o getLine.o qsort.o readlines.o alloc.o -o sort
+install: sort.o strcomp.o strtolower.o numcmp.o getLine.o qsort.o readlines.o alloc.o reverse.o
+	gcc sort.o numcmp.o strcomp.o getLine.o strtolower.o qsort.o readlines.o alloc.o reverse.o -o sort
+
+strcomp.o: strcomp.c
+	gcc -c strcomp.c
+
+strtolower.o: strtolower.c
+	gcc -c strtolower.c
+
+reverse.o: reverse.c
+	gcc -c reverse.c
 
 sort.o: sort.c sort.h
 	gcc -c sort.c

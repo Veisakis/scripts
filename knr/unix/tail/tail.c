@@ -21,12 +21,9 @@ int main(int argc, char *argv[]){
 				switch (c) {
 				case 'n':
 					n = 1;
-					previousFlag = 'n';
-					if (!*++argv[0])
-						break;	
-					else
+					while (*++argv[0])
 						numInput[i++] = *argv[0];
-						break;
+					break;
 				}
 			}
 		}

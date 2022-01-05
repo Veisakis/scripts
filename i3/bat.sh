@@ -9,7 +9,13 @@ then
 		echo 🔋$cap%
 		echo "" 
 		echo "" 
-		echo "#FF001D"
+		echo "#770404"
+	elif [ $cap -lt 30 ]
+	then
+		echo 🔋$cap%
+		echo "" 
+		echo "" 
+		echo "#6F3205"
 	else
 		echo 🔋$cap%
 	fi

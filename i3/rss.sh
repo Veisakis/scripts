@@ -7,9 +7,9 @@ case $BLOCK_BUTTON in
 	1) st -e newsboat ;;
 esac
 
-if [ news -gt 0 ]
+if [ $news -gt 0 ]
 then
-	echo "📬 $news"
+	echo 📬
 else
-	echo "📪 $news"
+	echo 📪
 fi

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sleep 5
 news=$(newsboat -x reload print-unread | awk '{print $1}')
 
 case $BLOCK_BUTTON in

@@ -3,10 +3,10 @@
 #include <string.h>
 #include <limits.h>
 
-int findShort(const char* s){
+int findShort(const char *s){
 	int word_size, shortest_size;
-	char* sentence;
-	char* word;	
+	char *sentence;
+	char *word;	
 
 	/* We have to copy the string to a new pointer,
  	because the exercise doesn't allow modifying s.

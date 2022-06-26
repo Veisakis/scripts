@@ -1,6 +1,6 @@
 #include <stddef.h>
 
-void max_index(int* arr, size_t size, int* max, size_t* index){
+void max_index(int *arr, size_t size, int *max, size_t *index){
 	*max = arr[0];
 	*index = 0;
 	

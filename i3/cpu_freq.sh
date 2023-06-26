@@ -1,5 +1,5 @@
 #!/bin/bash
 
-freq=$(cat /proc/cpuinfo | grep "cpu MHz" | awk 'NR==1 {print $4}')
+freq=$(cat /proc/cpuinfo | awk '/cpu MHz/ {print $4; exit}')
 
 echo $freq MHz

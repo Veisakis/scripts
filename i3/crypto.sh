@@ -1,8 +1,7 @@
 #!/bin/bash
 
-sleep 5
+balance=0.01285497
+price=$(curl -s rate.sx/btc | grep begin | awk '{print $2}' | tr -d '$')
 
-case $BLOCK_BUTTON in
-	1) echo   $(curl -s rate.sx/btc | grep begin | awk '{print $2}') ;;
-	*) echo   $(curl -s rate.sx/xmr | grep begin | awk '{print $2}') ;; 
-esac
+result=$(bc <<< "scale=2; $balance * $price" | awk '{printf("%.2f\n", $1)}')
+echo   $result

@@ -1,6 +1,7 @@
 #!/bin/bash
 
-count=$(ls /media/Archive/MM | wc -l)
+path="/home/manousos/myfiles/movies"
+count=$(ls $path | wc -l)
 
-ls /media/Archive/MM --sort=time | head -n15
+ls $path --sort=time | head -n15
 echo -e "\nTotal films: $count"

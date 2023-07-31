@@ -12,16 +12,17 @@ int main(int argc, char *argv[]){
 	}
 
 	char *addr;
-	int cidr;
+	char *cidr;
 
 	addr = strtok(argv[1], "/");
-	cidr = atoi(strtok(NULL, "/"));
+	cidr = strtok(NULL, "/");
 
+/*
 	int ip[4];
 	ip[0] = atoi(strtok(addr, "."));	
 	for (int i=1; i < 4 ; i++)
-		ip[i] = atoi(strtok(NULL, "."));
+		ip[i] = itob(atoi(strtok(NULL, ".")));
+*/
 
-	printb(8, ip[1]);
 	return 0;
 }

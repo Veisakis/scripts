@@ -4,7 +4,6 @@
 
 #include "../include/custom.h"
 
-
 int main(int argc, char *argv[]){
 	if (argc != 2){
 		printf("Usage: subnet <IP>/<CIDR>\n");
@@ -24,5 +23,7 @@ int main(int argc, char *argv[]){
 		ip[i] = itob(atoi(strtok(NULL, ".")));
 */
 
+	int ip[] = {192, 168, 1, 1};
+	printb(32, bytecat(4, ip));
 	return 0;
 }

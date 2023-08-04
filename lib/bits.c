@@ -38,7 +38,7 @@ int bytecat(size_t n_bytes, int bytes[]){
 	int n = 0;
 
 	for (int i=0; i < 4; i++){
-		printb(8, bytes[i]);
+		/*printb(8, bytes[i]);*/
 		n = (n << 8) | bytes[i];
 	}
 	return n;

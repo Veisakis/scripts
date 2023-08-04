@@ -10,20 +10,19 @@ int main(int argc, char *argv[]){
 		return 1;
 	}
 
+	int ip[4];
 	char *addr;
 	char *cidr;
 
 	addr = strtok(argv[1], "/");
 	cidr = strtok(NULL, "/");
 
-/*
-	int ip[4];
-	ip[0] = atoi(strtok(addr, "."));	
-	for (int i=1; i < 4 ; i++)
-		ip[i] = itob(atoi(strtok(NULL, ".")));
-*/
+	for (int i=0; i < 4 ; i++)
+		if (i == 0)
+			ip[0] = atoi(strtok(addr, "."));	
+		else
+			ip[i] = atoi(strtok(NULL, "."));
 
-	int ip[] = {192, 168, 1, 1};
 	printb(32, bytecat(4, ip));
 	return 0;
 }

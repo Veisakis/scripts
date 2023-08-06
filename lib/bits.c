@@ -26,7 +26,7 @@ void printb(size_t n_bits, int value){
 	}
 
 	while (i >= 0){
-		if (i % 8 == 0 && i != 0)
+		if (i % 8 == 0 && i != 0 && i != n_bits)
 			printf(".");
 
 		printf("%c", bits[--i]);

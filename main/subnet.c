@@ -27,18 +27,19 @@ int main(int argc, char *argv[]){
 			addr_split[i] = atoi(strtok(NULL, "."));
 
 	/* Get Subnet */
-	int n_mask = 32 - atoi(cidr_str);
-	int mask = ~0 << n_mask;
+	int mask_c = 32 - atoi(cidr_str);
+	int mask = ~0 << mask_c;
 
 	int address = bytecat(4, addr_split);
 	int subnet = address & mask;
 
-	/* Get Addresses */
+	/* Calculate Addresses */
 	int gateway = address & mask;
-	int broadcast = gateway | ~(~0 << n_mask);
+	int broadcast = gateway | ~(~0 << mask_c);
 
+	int n_addr = ~mask - 1;
 	int start_addr = gateway + 1;
-	int end_addr = gateway + n_mask;
+	int end_addr = gateway + n_addr;
 
 	/* Print Results */
 	char gateway_ip[16];
@@ -51,7 +52,7 @@ int main(int argc, char *argv[]){
 	btos(start_addr, start_ip);
 	btos(end_addr, end_ip);
 
-	printf("Number of available IP addresses: %d\n\n", n_mask);
+	printf("Number of available IP addresses: %d\n\n", n_addr);
 	printf("Default Gateway: %s\n", gateway_ip);
 	printf("Broadcast: %s\n", broadcast_ip);
 	printf("IP Range: %s - %s\n", start_ip, end_ip);

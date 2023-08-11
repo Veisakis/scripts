@@ -20,15 +20,15 @@ void printb(size_t n_bits, int value){
 
 		printf("%c", bits[--i]);
 	}
+
 	printf("\n");
+	free(bits);
 }
 
 int bytecat(size_t n_bytes, int bytes[]){
 	int n = 0;
 
-	for (int i=0; i < 4; i++){
-		/*printb(8, bytes[i]);*/
+	for (int i=0; i < 4; i++)
 		n = (n << 8) | bytes[i];
-	}
 	return n;
 }

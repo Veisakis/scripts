@@ -4,6 +4,7 @@
 
 #include "../include/custom.h"
 
+
 void btos(int bits, char *ip);
 
 int main(int argc, char *argv[]){

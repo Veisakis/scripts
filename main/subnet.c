@@ -34,6 +34,12 @@ int main(int argc, char *argv[]){
 	int address = bytecat(4, addr_split);
 	int subnet = address & mask;
 
+	/* Check if CIDR is 31 or 32 */
+	if (~mask == 0 || ~mask == 1){
+		printf("No IPs are available at this subnet.\n");
+		return 2;
+	}
+
 	/* Calculate Addresses */
 	int gateway = address & mask;
 	int broadcast = gateway | ~(~0 << mask_c);

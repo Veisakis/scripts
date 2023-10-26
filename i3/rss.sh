@@ -8,3 +8,7 @@ then
 else
 	echo 📪
 fi
+
+case $BLOCK_BUTTON in
+	1) urxvt -hold -geometry 20x8 -e newsboat
+esac

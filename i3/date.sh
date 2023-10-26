@@ -12,11 +12,11 @@ else
 fi
 
 if [ $result ]; then
-	echo $date
-	echo
-	echo "#000000"
-	echo "#99ccff"
+	echo 🎆 $date 
 else
-	echo $date
+	echo 📅 $date
 fi
 
+case $BLOCK_BUTTON in
+	1) notify-send -u low "$(cal -3)"
+esac

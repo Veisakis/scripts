@@ -1,6 +1,6 @@
 #!/bin/bash
 
-path="/home/manousos/myfiles/movies"
+path="/media/Archive"
 count=$(ls $path | wc -l)
 
 ls $path --sort=time | head -n15

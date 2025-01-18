@@ -3,4 +3,4 @@
 usedmem=$(free -h | awk 'NR==2 {print $3}' )
 totalmem=$(free -h | awk 'NR==2 {print $2}')
 
-echo "$usedmem / $totalmem"
+echo " $usedmem/$totalmem"
